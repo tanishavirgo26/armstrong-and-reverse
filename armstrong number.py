@@ -1,19 +1,31 @@
-'''#program to check the armstrong numbers or not armstrong:
-num=int(input("enter the numbers:"))
-sum=0
-temp=num
-while temp>0:
-    digit=temp%10
-    sum+=digit**3
-    temp//=10
-if num==sum:
-    print(num,"is a armstrong numbers.")
+# Python Program For Armstrong Number using While Loop
+
+Number = int(input("\nPlease Enter the Number to Check for Armstrong: "))
+
+# Initializing Sum and Number of Digits
+Sum = 0
+Times = 0
+           
+# Calculating Number of individual digits
+Temp = Number
+while Temp > 0:
+           Times = Times + 1
+           Temp = Temp // 10
+
+# Finding Armstrong Number
+Temp = Number
+while Temp > 0:
+           Reminder = Temp % 10
+           Sum = Sum + (Reminder ** Times)
+           Temp //= 10
+if Number == Sum:
+           print("\n %d is Armstrong Number.\n" %Number)
 else:
-    print(num,"is not armstrong numbers.")
-'''
+           print("\n %d is Not a Armstrong Number.\n" %Number)
+        
 
 #function to check the number is inverse of the numbers:
-n=int(input("enter the numbers:"))
+n=int(input("enter numbers:"))
 rev=0
 while(n>0):
     dig=n%10
